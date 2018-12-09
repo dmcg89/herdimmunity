@@ -1,0 +1,4 @@
+[
+  "virus.py::test_virus_instantiation", 
+  "virus.py::test_virus_instantiation2"
+]
