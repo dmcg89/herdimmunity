@@ -1,4 +1,4 @@
 [
-  "virus.py::test_virus_instantiation", 
-  "virus.py::test_virus_instantiation2"
+  "simulation.py::test_create_population", 
+  "simulation.py::test_infect_the_weak"
 ]

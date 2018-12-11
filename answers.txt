@@ -1,0 +1,15 @@
+What were the inputs you gave the simulation? (Population size, percent vaccinated, virus name, mortality rate, reproductive rate)
+
+Inputs were population size = 100,000, percent vaccinated = 60%, Tuberculosis, mortaility rate = 70%, reproduction rate = .1, and initial infected = 100.  I started with a high initial infections because I wanted to see some destruction I suppose.
+
+What percentage of the population became infected at some point before the virus burned out?
+
+About 61% of the population became infected.
+
+What percentage of the population died from the virus?
+
+About 28% of the population died from the virus.
+
+Out of all interactions sick individuals had during the entire simulation, how many total interactions did we see where a vaccination saved a person from potentially becoming infected?
+
+The simulation lasted 9 turns at there were around 3,900,000 interactions where the prevented potential infection.  Thats 39X the initial population which is pretty incredible.

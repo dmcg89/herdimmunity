@@ -1,3 +1,5 @@
 {
-  "person.py::test_did_survive_infection": true
+  "person.py::test_did_survive_infection": true, 
+  "simulation.py::test_create_population": true, 
+  "simulation.py::test_infect_the_weak": true
 }
