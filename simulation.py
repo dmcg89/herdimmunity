@@ -129,9 +129,6 @@ class Simulation(object):
         for person in self.population:
             print(person._id, "Alive", person.is_alive, "Vac", person.is_vaccinated, "Inf", person.is_infected)
 
-population_size = 100000
-vaccination_percentage = .8
-initial_infected = 10
 
 
 if __name__ == "__main__":
