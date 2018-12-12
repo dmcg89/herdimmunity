@@ -1,4 +1,4 @@
 [
-  "simulation.py::test_create_population", 
-  "simulation.py::test_infect_the_weak"
+  "simtests.py::test_create_population", 
+  "simtests.py::test_infect_the_weak"
 ]

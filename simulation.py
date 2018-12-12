@@ -76,7 +76,7 @@ class Simulation(object):
         for person in self.population:
             if person.is_alive == True and person.is_infected== True:
                 i = 0
-                while i < 5:
+                while i < 99:
                     random_person = self.population[random.randint(0, self.population_size - 1)]
                     if random_person.is_alive == True:
                         self.interaction(person, random_person)
@@ -124,7 +124,6 @@ class Simulation(object):
                     self.logger.log_infection_survival(person, True)
                     self.total_dead += 1
 
-    ##TODO L@@K
 
     def printlist(self):
         for person in self.population:
@@ -134,20 +133,6 @@ population_size = 100000
 vaccination_percentage = .8
 initial_infected = 10
 
-# virus_name = "ebola"
-# mortality_rate = .5
-# basic_repro_num= .5
-# def __init__(self, name, repro_rate, mortality_rate):
-
-# virus = Virus("Ebola", .5, .7)
-
-
-# sim = Simulation(population_size, vaccination_percentage, initial_infected, virus)
-# sim._create_population()
-# sim.printlist()
-# sim.time_step()
-# sim.printlist()
-# sim.run()
 
 if __name__ == "__main__":
     params = sys.argv[1:]
@@ -164,35 +149,6 @@ if __name__ == "__main__":
     virus = Virus(virus_name, repro_num, mortality_rate)
     sim = Simulation(pop_size, vacc_percentage, initial_infected, virus)
     sim.run()
-#
 
-
-def test_create_population():
-    # virus = Virus('testvirus', .25, .25)
-    # sim = Simulation(100000, .07, 10, virus)
-    # create some people to test if our init method works as expected
-    sim._create_population()
-    assert len(sim.population) == sim.population_size
-    infected_count_test = 0
-    vaccination_count_test = 0
-    for person in sim.population:
-        if person.is_infected == True:
-            infected_count_test +=1
-    for person in sim.population:
-        if person.is_vaccinated:
-            vaccination_count_test +=1
-    assert infected_count_test == sim.initial_infected
-    # checks if vaccinated percentaion is within 10% of vacc percentage rate
-    vacc_percentage =  float(vaccination_count_test)/ sim.population_size
-    assert vacc_percentage >= sim.vaccination_percentage - .1
-    assert vacc_percentage <= sim.vaccination_percentage + .1
-
-def test_infect_the_weak():
-## checking if people are getting infected  -- subtracts one from ID because person._id starts at 1 while the index in population list starts at 0
-    sim._create_population()
-    sim.newly_infected = [200]
-    person1 = sim.population[199]
-    assert person1.is_infected == False
-    sim.infect_the_weak()
-    person1 = sim.population[199]
-    assert person1.is_infected == True
+virus = Virus("Ebola", .5, .7)
+sim = Simulation(100000, .08, 10, virus)
