@@ -63,11 +63,12 @@ class Simulation(object):
         while should_continue == True:
             self.time_step()
             step_counter += 1
+            print("Iteration: ", step_counter,"...")
             should_continue = self._simulation_should_continue()
 
         print("The simulation has ended after", step_counter, " turns.")
-        print("Total infected", self.total_infected, "Total Dead", self.total_dead)
-        print("Interactions where indidual as safe from vacciation", self.vacc_int)
+        print("Total infected: ", self.total_infected, "Total Dead: ", self.total_dead)
+        print("Interactions where indidual was safe from vacciation", self.vacc_int)
 
         self.logger.log_time_step(self.total_dead, step_counter)
 
