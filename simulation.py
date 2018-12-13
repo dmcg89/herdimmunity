@@ -1,5 +1,5 @@
-''' copy past this to run:  name,repro,mort,init pop, init infected
-    python3 simulation.py virusname .25 .8 1000000 .5 200
+''' copy past this to run:  name,repro,mort,init pop, vacrate, init infected
+    python3 simulation.py virusname .25 .8 1000000 .7 200
 '''
 
 import random, sys
