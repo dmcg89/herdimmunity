@@ -1,3 +1,7 @@
+''' copy past this to run:  name,repro,mort,init pop, init infected
+    python3 simulation.py virusname .25 .8 1000000 .5 200
+'''
+
 import random, sys
 random.seed(42)
 from person import Person
